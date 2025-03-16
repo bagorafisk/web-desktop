@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#desktop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #2e2e2e;
+    overflow: hidden;
+}
+
+.window {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 820px;
+    border: 1px solid #aaa;
+    background: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.titlebar {
+    background: #007acc;
+    color: #fff;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    padding: 10px;
+}
