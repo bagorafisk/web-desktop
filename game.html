@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Frame</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<!-- The game code expects a canvas with id "canvas" -->
+<!--<canvas id="canvas" width="800" height="600"></canvas>-->
+<div id="ui"></div>
+<div id="io"></div>
+<div id="canvas">           <!-- 9.0 -->
+    <canvas></canvas>
+    <canvas></canvas>
+    <canvas></canvas>
+</div>
+
+<!-- Load balder.js as a module if your game expects it as such -->
+<script src="./src/balder.js"></script>
+
+<!-- Dynamically import the game module -->
+<script type="module">
+    import("./assets/games/snake-battle.js")
+        .then(module => {
+            console.log(`Game module loaded successfully.`);
+            // Optionally, initialize the game here:
+            // module.initGame();
+        })
+        .catch(error => {
+            console.error("Failed to load game module:", error);
+        });
+</script>
+</body>
+</html>
